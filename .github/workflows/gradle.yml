@@ -52,6 +52,9 @@ jobs:
     - name: Give permission to gradlew
       run: chmod +x ./gradlew
 
+    - name: Install Redis CLI
+      run: sudo apt-get install -y redis-tools
+
     - name: Wait for PostgreSQL to be ready
       run: |
         for i in {1..30}; do
