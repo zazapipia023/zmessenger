@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: zmessenger
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  redis:
+    url: redis://Amkalultras1@127.0.0.1:6379
+    timeout: 2000
+    ssl: true
+    lettuce:
+      pool:
+        size: 10
+        max-idle: 8
+        min-idle: 2
