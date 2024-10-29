@@ -1,6 +1,9 @@
 spring:
   application:
     name: zmessenger
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
