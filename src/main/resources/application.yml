@@ -10,6 +10,9 @@ spring:
     password: postgres
     driver-class-name: org.postgresql.Driver
   redis:
+    host: "localhost"
+    port: "6379"
+    password: "Amkalultras1"
     url: redis://Amkalultras1@127.0.0.1:6379
     timeout: 2000
     ssl: true

@@ -1,7 +1,7 @@
 CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
-    password_hash VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     last_seen TIMESTAMP
@@ -27,13 +27,6 @@ CREATE TABLE messages (
     content TEXT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     is_read BOOLEAN DEFAULT FALSE
-);
-
-CREATE TABLE attachments (
-    attachment_id SERIAL PRIMARY KEY,
-    message_id INTEGER REFERENCES messages(message_id) ON DELETE CASCADE,
-    file_url VARCHAR(255) NOT NULL,
-    file_type VARCHAR(50)
 );
 
 CREATE TABLE friends (
