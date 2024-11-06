@@ -1,4 +1,4 @@
-package com.zaza.zmessenger.models;
+package com.zaza.zmessenger.models.postgres;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -17,12 +17,10 @@ public class Messages {
     @GeneratedValue
     private Long id;
 
-    @Id
     @ManyToOne
     @JoinColumn(name = "chat_id", nullable = false)
     private Chats chat;
 
-    @Id
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private Users sender;

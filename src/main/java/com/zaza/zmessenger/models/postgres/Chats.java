@@ -1,4 +1,4 @@
-package com.zaza.zmessenger.models;
+package com.zaza.zmessenger.models.postgres;
 
 import jakarta.persistence.*;
 

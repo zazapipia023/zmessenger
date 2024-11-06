@@ -1,22 +1,18 @@
-package com.zaza.zmessenger.models;
+package com.zaza.zmessenger.models.redis;
 
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 
-@RedisHash("user_session")
+@RedisHash("user_online_status")
 @Getter
 @Setter
-public class UserSession {
+public class UserOnlineStatus {
 
     @Id
     private String userId;
 
-    private String accessToken;
-
-    private String refreshToken;
-
-    private String deviceInfo;
+    private Long lastActive;
 
 }

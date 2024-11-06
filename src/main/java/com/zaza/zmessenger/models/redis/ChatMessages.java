@@ -1,5 +1,6 @@
-package com.zaza.zmessenger.models;
+package com.zaza.zmessenger.models.redis;
 
+import com.zaza.zmessenger.models.postgres.Messages;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;

@@ -1,5 +1,6 @@
-package com.zaza.zmessenger.models;
+package com.zaza.zmessenger.models.postgres;
 
+import com.zaza.zmessenger.models.postgres.compositekeys.FriendsId;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,15 +13,8 @@ import java.sql.Timestamp;
 @Setter
 public class Friends {
 
-    @Id
-    @OneToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private Users userOne;
-
-    @Id
-    @OneToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private Users userTwo;
+    @EmbeddedId
+    private FriendsId id;
 
     @Column(name = "status")
     private String status = "pending";
