@@ -11,7 +11,7 @@ import java.sql.Timestamp;
 @Table(name = "friends")
 @Getter
 @Setter
-public class Friends {
+public class Friend {
 
     @EmbeddedId
     private FriendsId id;

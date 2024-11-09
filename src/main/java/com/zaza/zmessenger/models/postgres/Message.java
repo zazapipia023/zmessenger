@@ -10,7 +10,7 @@ import java.sql.Timestamp;
 @Table(name = "messages")
 @Getter
 @Setter
-public class Messages {
+public class Message {
 
     @Id
     @Column(name = "message_id")
@@ -19,11 +19,11 @@ public class Messages {
 
     @ManyToOne
     @JoinColumn(name = "chat_id", nullable = false)
-    private Chats chat;
+    private Chat chat;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private Users sender;
+    private User sender;
 
     @Column(name = "content", nullable = false)
     private String content;

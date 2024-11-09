@@ -6,7 +6,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "chats")
-public class Chats {
+public class Chat {
 
     @Id
     @Column(name = "chat_id")

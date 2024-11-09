@@ -1,6 +1,6 @@
 package com.zaza.zmessenger.models.redis;
 
-import com.zaza.zmessenger.models.postgres.Messages;
+import com.zaza.zmessenger.models.postgres.Message;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
@@ -16,6 +16,6 @@ public class ChatMessages {
     @Id
     private String chatId;
 
-    private List<Messages> messages;
+    private List<Message> messages;
 
 }
