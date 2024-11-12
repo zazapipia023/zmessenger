@@ -2,8 +2,7 @@ package com.zaza.zmessenger.models.postgres;
 
 import com.zaza.zmessenger.models.postgres.compositekeys.FriendsId;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.sql.Timestamp;
 
@@ -11,6 +10,10 @@ import java.sql.Timestamp;
 @Table(name = "friends")
 @Getter
 @Setter
+@Builder
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class Friend {
 
     @EmbeddedId
